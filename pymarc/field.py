@@ -45,7 +45,7 @@ class Field(Iterator):
             self.data = data
         else:
             self.indicator1, self.indicator2 = self.indicators = indicators
-            self.subfields = subfields
+        self.subfields = subfields
 
     def __iter__(self):
         self.__pos = 0
