@@ -30,11 +30,10 @@ class Field(Iterator):
     """
     def __init__(self, tag, indicators=None, subfields=None, data=u''):
         if indicators == None:
-            indicators = []
+            indicators = [" ", " "]
         if subfields == None:
             subfields = []
         indicators = [text_type(x) for x in indicators]
-
         # attempt to normalize integer tags if necessary
         try:
             self.tag = '%03i' % int(tag)
